@@ -1,0 +1,900 @@
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BUFFGRAPHICS</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css">
+		<script src="js/mobile.js" type="text/javascript"></script>
+	
+		<style>
+			/* Full-height video container */
+			.video-container {
+				position: relative;
+				width: 100%;
+				height: 100vh; /* Full viewport height */
+			}
+	
+			/* Video setup */
+			#background-video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover; /* Ensure the video covers the entire area */
+			}
+	
+			/* Centering the brand name on top of the video */
+			.brand-text {
+				position: absolute;
+				top: 50%; /* Vertically center */
+				left: 50%; /* Horizontally center */
+				transform: translate(-50%, -50%); /* Adjust to exactly center */
+				color: #FFCC00; /* Yellow color */
+				font-weight: bold; /* Bold text */
+				font-size: 50px; /* Large text */
+				text-align: center;
+				text-transform: uppercase;
+				letter-spacing: 5px; /* Add spacing between letters */
+				z-index: 10; /* Make sure it's above the video */
+			}
+	
+			/* Navigation Bar */
+			#navigation {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+				z-index: 1000;
+				padding: 10px 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+	
+			#navigation ul {
+				list-style: none;
+				display: flex;
+				gap: 20px;
+			}
+	
+			#navigation ul li {
+				display: inline-block;
+			}
+	
+			#navigation ul li a {
+				color: white;
+				text-decoration: none;
+				font-size: 18px;
+				padding: 10px 20px;
+				display: inline-block;
+				transition: background-color 0.3s ease;
+			}
+	
+			#navigation ul li a:hover {
+				background-color: #575757;
+				border-radius: 5px;
+			}
+			.services {
+  background-color: yellow; /* Yellow background for the services section */
+  padding: 50px 0;
+}
+
+.services .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33% - 20px); /* Each service takes up 1/3rd of the space */
+  text-align: center;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .service-item {
+    width: calc(50% - 20px); /* 2 items per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item {
+    width: 100%; /* Full-width on small screens */
+  }
+}
+/* Simple Services Section */
+.services-simple {
+  background-color:yellow; /* White background */
+  padding: 40px 0;
+  color: #333;  /* Text color */
+}
+
+.services-simple .container {
+  max-width: 1200px;
+  margin: 0 auto;  /* Center the container */
+  padding: 0 20px;
+}
+
+.services-simple h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.service {
+  margin-bottom: 30px;
+}
+
+.service h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Optional: Hover effect for service title */
+.service:hover h3 {
+  color: #f0c500;  /* Change color on hover */
+}
+/* Contact Us Section */
+.contact-us {
+  background-image: url('your-image-path.jpg'); /* Add your image path here */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color for contrast */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-us h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #f0c500; /* Yellow color for heading */
+}
+
+.contact-table {
+  background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.contact-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contact-table th, .contact-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.contact-table th {
+  background-color: #f0c500; /* Yellow for table headers */
+  color: black;
+}
+
+.contact-table td {
+  background-color: #333; /* Dark background for table data */
+}
+
+.contact-us p {
+  font-size: 18px;
+  color: white;
+}
+
+.contact-us a {
+  text-decoration: none;
+  color: #f0c500; /* Yellow for links */
+  font-weight: bold;
+}
+
+.contact-us a:hover {
+  color: #fff;
+}
+/* Contact Us Section */
+.contact-us {
+  background-image: url('beautidul.jpg'); /* Add your image path here */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Text color for contrast */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-us h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #f0c500; /* Yellow color for heading */
+}
+
+.contact-content {
+  display: flex; /* Flexbox for side-by-side layout */
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure responsive layout */
+}
+
+.contact-table, .contact-form {
+  background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* Ensure both sections take equal space */
+}
+
+.contact-table h3, .contact-form h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #f0c500; /* Yellow heading color */
+}
+
+.contact-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contact-table th, .contact-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.contact-table th {
+  background-color: #f0c500; /* Yellow for table headers */
+  color: black;
+}
+
+.contact-table td {
+  background-color: #333; /* Dark background for table data */
+}
+
+.contact-form label {
+  font-size: 16px;
+  color: white;
+  margin: 10px 0;
+  display: block;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: #f0c500;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.contact-form button:hover {
+  background-color: #e0a800;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-table, .contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+/* Clients & Brands Section */
+.clients-brands {
+  background-color: #f4f4f4;  /* Light background for contrast */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.clients-brands .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Title */
+.clients-brands h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.client-logos .logo {
+  width: 150px;  /* Adjust logo size */
+  height: auto;
+}
+
+.client-logos img {
+  width: 100%;  /* Ensure logos fit inside their container */
+  height: auto;
+}
+
+.testimonials {
+  margin-bottom: 40px;
+}
+
+.testimonials h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.testimonial p:last-child {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.client-approach {
+  background-color: #333;  /* Dark background for contrast */
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.client-approach h3 {
+  font-size: 28px;
+  color: #f0c500; /* Yellow color for heading */
+  margin-bottom: 20px;
+}
+
+.client-approach p {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .client-logos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .client-logos .logo {
+    margin-bottom: 20px;
+  }
+}
+/* Brand Strategy Section */
+.brand-strategy {
+  background-color: #f4f4f4;  /* Light background */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.brand-strategy .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main Heading Style */
+.brand-strategy .main-heading {
+  font-size: 48px; /* Large font size for title */
+  color: #333; /* Dark color for main title */
+  font-family: 'Arial', sans-serif; /* Stylish font */
+  font-weight: 700;
+  letter-spacing: 2px; /* Space between letters */
+  text-transform: uppercase; /* All caps */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  margin-bottom: 20px;
+}
+
+/* Sub Heading Style */
+.brand-strategy .sub-heading {
+  font-size: 22px;
+  color: #555; /* Slightly lighter color */
+  font-family: 'Georgia', serif; /* Elegant font for subtitle */
+  font-style: italic;
+  line-height: 1.8; /* Line spacing for readability */
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+/* Add some decorative lines */
+.brand-strategy .main-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #f0c500; /* Yellow underline effect */
+  margin: 20px auto;
+}
+/* Brand Name Text Styling */
+.brand-text {
+    position: absolute; /* Absolute positioning to place text over video */
+    top: 50%;  /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Fine-tune centering */
+    text-align: center; /* Align text to center */
+    z-index: 1; /* Ensure it's above the video */
+    padding: 0 20px;  /* Add some padding */
+}
+
+/* Styling for the Brand Name Text */
+.brand-text h1 {
+    font-family: 'Dancing Script', cursive; /* Elegant cursive font */
+    font-size: 72px;  /* Large size for impact */
+    font-weight: 700;  /* Bold font weight for prominence */
+    color: #fff;  /* White color for visibility */
+    text-transform: uppercase;  /* Capitalize letters */
+    letter-spacing: 4px;  /* Increased letter spacing for elegance */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.4); /* Beautiful text shadow for depth */
+    margin: 0;  /* Remove margin */
+    padding: 0;  /* Remove padding */
+    z-index: 2; /* Ensure text stays above video */
+    transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Brand Text */
+.brand-text h1:hover {
+    color: #f0c500;  /* Change text color to gold on hover */
+    transform: scale(1.1);  /* Slightly scale up the text */
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);  /* Stronger glow effect */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .brand-text h1 {
+        font-size: 48px;  /* Slightly smaller font on mobile */
+        letter-spacing: 2px;  /* Reduce letter spacing on smaller screens */
+    }
+}
+
+
+		</style>
+	</head>
+	<body>
+	
+		<!-- Video Container with Background Video -->
+		<div class="video-container">
+			<video autoplay muted loop id="background-video">
+				<source src="bestanimationvideo.mp4" type="video/mp4">
+				<source src="bestanimationvideo.webm" type="video/webm">
+				<source src="bestanimationvideo.ogg" type="video/ogg">
+				Your browser does not support the video tag.
+			</video>
+	
+			<!-- Brand Name Text -->
+			<div class="brand-text">
+				<h1>Buffghraphics</h1>
+			</div>
+		</div>
+	
+		<!-- Navigation Menu -->
+		<nav id="navigation">
+			<!-- Logo -->
+			<img src="images/logupictures4.jpg" height="50" width="100" alt="Web Design">
+			<!-- Navigation Links -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+
+			</ul>
+		</nav>
+	
+		<!-- Page Content -->
+		<div id="page">
+			<section class="brand-strategy">
+				<div class="container">
+				  <h1 class="main-heading">BRAND STRATEGY</h1>
+				  <p class="sub-heading">Our core expertise lies in creating insightful<br>brand strategies that go beyond the surface.</p>
+				</div>
+			  </section>
+			  
+	
+	</body>
+	</html>
+	
+</body>
+</html>
+
+</body>
+</html>
+
+			<div class="footer">
+				<div class="footer-container">
+			
+				  <!-- First Row: 4 small images (right) + 1 large image (left) -->
+				  <div class="image-row">
+					<div class="image-left">
+					  <a href="blog.html">
+						<h3   style="color:white;">web Desighn</h3>
+						<img src="images/iamfreewith.avif" height="200" width="400" alt="Web Design">
+					</a>
+					</div>
+					<div class="image-right">
+						<h2  style="color:white;">web Development</h2>
+					  <img src="images/imagesnature.jpg" height="200" width="200" alt="Nature Image" class="clickable-image">
+					  <img src="images/watermillon.webp" height="100" width="200" alt="Watermelon Image" class="clickable-image">
+					  <img src="images/GYM.webp" height="100" width="200" alt="Gym Image" class="clickable-image">
+					  <img src="images/skatergirls.jpg" height="100" width="200" alt="Skater Girls Image" class="clickable-image">
+					</div>
+				  </div>
+			
+				  <!-- Second Row: 4 small images (right) + 1 large image (left) -->
+				  <div class="image-row">
+					<div class="image-left">
+					  <a href="blog.html">
+						<h2 style="color:white;">App Development</h2>
+						<img src="images/mockup.avif" height="250" width="450" alt="Featured Image">
+					  </a>
+					</div>
+					<div class="image-right">
+						<h2 style="color:white;">Marketing</h2>
+					  <img src="images/marketinghh.jpg" height="100" width="200" alt="Makwas Image" class="clickable-image">
+					  <img src="images/gogilywal.jpg" height="100" width="200" alt="Monamona Image" class="clickable-image">
+					  <img src="images/mahnorghahgs.jpg" height="100" width="200" alt="Gigigo Image" class="clickable-image">
+					  <img src="images/premium.avif" height="100" width="200" alt="Boxing Ring Image" class="clickable-image">
+					</div>
+				  </div>
+			<div class="footer">
+				<div class="footer-container">
+			
+				  <!-- First Row: 4 small images (right) + 1 large image (left) -->
+				  <div class="image-row">
+					<div class="image-left">
+					  <a href="blog.html">
+						<h1   style="color:white;">brand marketing</h1>
+						<img src="images/brandhghg.jpg" height="200" width="400" alt="Web Design">
+					</a>
+					</div>
+					<div class="image-right">
+						<h1   style="color:white;">App Development</h1>
+					  <img src="images/webdevelopment.jpg" height="50" width="200" alt="Nature Image" class="clickable-image">
+					  
+					</div>
+				  </div>
+			
+				  <!-- Second Row: 4 small images (right) + 1 large image (left) -->
+				  <div class="image-row">
+					<div class="image-left">
+					  <a href="blog.html">
+						<h1 style="color:white;">App Development</h1>
+						<img src="images/flower.jpg" height="250" width="450" alt="Featured Image">
+					  </a>
+					</div>
+					<div class="image-right">
+						<h1 style="color:white;">BRAND Development</h1>
+					  <img src="images/digitalmarketing.avif" height="100" width="200" alt="Makwas Image" class="clickable-image">
+					  <img src="images/34567.jpg" height="200" width="400" alt="Monamona Image" class="clickable-image">
+					  <img src="images/hfds.jpg" height="100" width="200" alt="Gigigo Image" class="clickable-image">
+					  <img src="images/hfdassan.jpg" height="100" width="200" alt="Boxing Ring Image" class="clickable-image">
+					</div>
+				  </div>
+			
+				</div>
+			  </div>
+			  <section class="services">
+				<div class="container">
+				  <h2>We’ve got everything you need to launch and grow your business</h2>
+				  <div class="services-list">
+					<div class="service-item">
+					  <h3 style="color: black;">Creativity & Content</h3>
+					  <p>In the realm of visual and verbal communication, we go 
+						beyond visibility. We ensure that your brand is experienced, not just seen. Our creative team is dedicated to realizing your brand's vision through 
+						captivating content that leaves a lasting impression.</p>
+					</div>
+					<div class="service-item">
+					  <h3 style="color:black;">Social Media Services </h3>
+					  <p>Harnessing the power of social media, we connect your 
+						brand with target audiences through meaningful content.
+						 Our social media strategies are designed to foster genuine 
+						 connections, turning followers into
+						 brand advocates and driving sustained engagement. </p>
+					</div>
+					<div class="service-item">
+					  <h3 style="color: black;">Influencer Marketing</h3>
+					  <p>We understand the importance of authentic connections. 
+						Our influencer marketing strategies match your brand with the right 
+						personalities, bringing customized creative concepts to life. Through these connections, 
+						we amplify your brand's reach and relevance in the digital landscape. </p>
+					</div>
+					<!-- Add more services as needed -->
+				  </div>
+				</div>
+				  <div class="services-list">
+					<div class="service-item">
+					  <h3 style="color: black;">Web Design</h3>
+					  <p>We don't just build websites; we craft unique digital portfolios that serve as 
+						drivers of engagement and growth. Our approach combines aesthetics with functionality, 
+						creating online 
+						experiences that not only reflect your brand but also convert visitors into loyal customers. </p>
+					</div>
+					<div class="service-item">
+					  <h3 style="color:black;">Event Management </h3>
+					  <p>From concept to execution, our event management services ensure that 
+						your brand's events are not just moments 
+						but experiences that linger in the minds of your audience </p>
+					</div>
+					<div class="service-item">
+					  <h3 style="color: black;">Media Production</h3>
+					  <p>Our media production team brings your brand to life through 
+						visually stunning and compelling content, creating 
+						a narrative that captivates and resonates. </p>
+					</div>
+					<div class="service-item">
+						<h3 style="color: black;">Motion and Graphic Design</h3>
+						<p>Elevate your brand's visual identity with our motion and graphic design services, 
+							where every design element tells a story and captures the essence of your brand.  </p>
+					  </div><div class="service-item">
+						<h3 style="color: black;">Copywriting</h3>
+						<p>Words have power. Our copywriting services craft messages that not 
+							only communicate but also resonate, 
+							ensuring your brand's voice is heard in the noisy digital landscape. </p>
+					  </div>
+					  <div class="service-item">
+						<h3 style="color: black;">Media Buying</h3>
+						<p>Navigate the complex media landscape with our strategic media buying services, 
+							ensuring your brand reaches the right audience at the right time. </p>
+					  </div>
+					  <div class="service-item">
+						<h3 style="color: black;">Research Services</h3>
+						<p>Informed decisions drive success. Our research services provide the insights
+							 needed to shape strategies, ensuring your brand stays ahead in a dynamic market.  </p>
+					  </div><div class="service-item">
+						<h3 style="color: black;">Digital Marketing</h3>
+						<p>From social media to SEO, our digital marketing strategies are tailored to amplify your 
+							brand's presence in the ever-evolving digital landscape.  </p>
+					  </div><div class="service-item">
+						<h3 style="color: black;">Brand Development</h3>
+						<p>We don't just create brands; we cultivate them. Our brand development services 
+							focus on establishing a 
+							strong foundation, ensuring your brand stands out in a crowded market. </p>
+					  </div>
+					<!-- Add more services as needed -->
+				  </div>
+				</div>
+			  </section>
+
+			  <section class="services-simple">
+				<div class="container">
+				  <h2>About us</h2>
+				  <div class="service">
+					<h1  style="color: #333;">We Are in Buffghraphics</h1>
+					<p><h3> Buffghraphics, we don't just work on projects; we build lasting partnerships.<br>
+						Our team is dedicated to creating compelling strategic narratives, developing
+						 attention-grabbing content, and <br>structuring brilliant brand personalities.
+						  We've cultivated an environment where both our employees and clients are 
+						empowered to learn, grow, and achieve success. </p></h3>
+					</div>
+				  </div>
+				  <!-- Add more services as required -->
+				</div>
+			  
+			  <section class="contact-us">
+				<div class="container">
+				  <h2>Contact Us</h2>
+				  
+				  <!-- Two Column Layout -->
+				  <div class="contact-content">
+					
+					<!-- Table Section (Left Column) -->
+					<div class="contact-table">
+					  <h3>Our Contact Information</h3>
+					  <table>
+						<tr>
+						  <th>Name</th>
+						  <td>John Doe</td>
+						</tr>
+						<tr>
+						  <th>Email</th>
+						  <td>johndoe@example.com</td>
+						</tr>
+						<tr>
+						  <th>Phone</th>
+						  <td>(123) 456-7890</td>
+						</tr>
+						<tr>
+						  <th>Address</th>
+						  <td>123 Main Street, City, Country</td>
+						</tr>
+					  </table>
+					</div>
+					
+					<!-- Form Section (Right Column) -->
+					<div class="contact-form">
+					  <h3>Send Us Your Details</h3>
+					  <form action="your-form-handler.php" method="POST">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" required>
+			  
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required>
+			  
+						<label for="phone">Phone:</label>
+						<input type="text" id="phone" name="phone" required>
+			  
+						<label for="message">Message:</label>
+						<textarea id="message" name="message" required></textarea>
+			  
+						<button type="submit">Submit</button>
+					  </form>
+					</div>
+					
+				  </div>
+				</div>
+			  </section>
+			  <section class="clients-brands">
+				<div class="container">
+				  <h2>Our Esteemed Clients</h2>
+				  
+				  <!-- Client Logos Section -->
+				  <div class="client-logos">
+					<div class="logo">
+					  <img src="brand1-logo.png" alt="Brand 1">
+					</div>
+					<div class="logo">
+					  <img src="brand2-logo.png" alt="Brand 2">
+					</div>
+					<div class="logo">
+					  <img src="brand3-logo.png" alt="Brand 3">
+					</div>
+					<div class="logo">
+					  <img src="brand4-logo.png" alt="Brand 4">
+					</div>
+					<!-- Add more logos as required -->
+				  </div>
+			  
+				  <!-- Client Testimonials Section -->
+				  <div class="testimonials">
+					<h3>What Our Clients Say</h3>
+					
+					<div class="testimonial">
+					  <p>"This company provided us with exceptional service and helped us achieve our goals. We are highly satisfied!"</p>
+					  <p>- John Doe, CEO of Brand 1</p>
+					</div>
+					
+					<div class="testimonial">
+					  <p>"The team at [Your Company Name] understood our needs perfectly and delivered high-quality solutions. Highly recommended!"</p>
+					  <p>- Jane Smith, Marketing Director at Brand 2</p>
+					</div>
+					
+					<div class="testimonial">
+					  <p>"A wonderful experience working with such a dedicated and talented team. They made our vision a reality!"</p>
+					  <p>- Mark Lee, Founder of Brand 3</p>
+					</div>
+					<!-- Add more testimonials as required -->
+				  </div>
+			  
+				  <!-- Client Approach Section -->
+				  <div class="client-approach">
+					<h3>Our Approach</h3>
+					<p>We take a client-centered approach, ensuring that every solution is tailored to the unique needs of our clients. We focus on building long-term relationships based on trust, transparency, and exceptional service.</p>
+				  </div>
+				</div>
+			  </section>
+			  
+			  
+			  
+						  
+			  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Enlarge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="js/javascript.js"></script>
+
+</body>
+</html>
+
+			
+				</div>
+			  </div>
+			  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Enlarge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script src="js/javascript.js"></script>
+
+</body>
+</html>
+
+			
+			  <script src="js/javascript.js"></script>
+			
+			</body>
+			</html>
+			
